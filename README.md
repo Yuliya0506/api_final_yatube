@@ -6,7 +6,7 @@ api_final_yatube
 Установка
 Скопируйте проект на свой компьютер:
 
-git clone https://github.com/LariosDeen/api_final_yatube
+git clone https://github.com/Yuliya0506/api_final_yatube
 Cоздайте и активируйте виртуальное окружение для этого проекта:
 
 python3 -m venv env
