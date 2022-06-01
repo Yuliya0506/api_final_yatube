@@ -8,7 +8,6 @@
 
 ```git clone https://github.com/Yuliya0506/api_final_yatube```
 ### Cоздайте и активируйте виртуальное окружение для этого проекта:
-<<<<<<< HEAD
 `python3 -m venv env`
 `source env/bin/activate`
 ### Установите зависимости из файла requirements.txt:
@@ -41,56 +40,3 @@
 - Python
 - Django
 - Django REST Framework
-=======
-
-`python3 -m venv env`
-`source env/bin/activate`
-### Установите зависимости из файла requirements.txt:
-
-`python3 -m pip install --upgrade pip`
-`pip install -r requirements.txt`
-### Выполните миграции:
-
-`python3 manage.py migrate`
-### Перейдите в директорию проекта:
-
-`cd yatube_api`
-### Запустите проект:
-
-`python3 manage.py runserver`
-
-## Примеры:
-
-- Пользователь аутентифицируется посредвстом JWTAuthentication.
-- Получите токен.
-- Отправьте POST запрос на URL:
-
-`http://127.0.0.1:8000/api/v1/auth/jwt/create/`
-- Получение публикаций GET запрос:
-
-`http://127.0.0.1:8000/api/v1/posts/`
-- Создание публикации POST запрос:
-
-`http://127.0.0.1:8000/api/v1/posts/`
-
-- Получение одной публикации GET запрос:
-
-`http://127.0.0.1:8000/api/v1/posts/{id}/`
-- Обновление публикации PUT запрос:
-
-`http://127.0.0.1:8000/api/v1/posts/{id}/`
-
-- Частичное обновление публикации PATHС запрос:
-
-`http://127.0.0.1:8000/api/v1/posts/{id}/`
-
-- Удаление публикации DELETE запрос:
-
-`http://127.0.0.1:8000/api/v1/posts/{id}/`
-
-## В проекте использованы следующие технологии: 
-- Python
-- Django
-- Django REST Framework
-	
->>>>>>> ba3ae201067f25bfdc85d2c795accba483ec4176
