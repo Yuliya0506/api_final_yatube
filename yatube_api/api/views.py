@@ -3,12 +3,18 @@ from rest_framework.generics import get_object_or_404
 from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.permissions import AllowAny
 from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from rest_framework.mixins import CreateModelMixin, ListModelMixin
+from rest_framework.viewsets import GenericViewSet
 
 from api.permissions import OnlyAuthorChangeObject
 from api.serializers import (
     PostSerializer, GroupSerializer, CommentSerializer, FollowSerializer
 )
 from posts.models import Post, Group
+
+
+class ListCreateViewSet(CreateModelMixin, ListModelMixin, GenericViewSet):
+    pass
 
 
 class PostViewSet(viewsets.ModelViewSet):
@@ -43,7 +49,7 @@ class GroupViewSet(viewsets.ReadOnlyModelViewSet):
     permission_classes = (AllowAny,)
 
 
-class FollowViewSet(viewsets.ModelViewSet):
+class FollowViewSet(ListCreateViewSet):
     permission_classes = [
         permissions.IsAuthenticated
     ]

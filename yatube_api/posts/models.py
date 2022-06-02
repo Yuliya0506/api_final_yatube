@@ -23,7 +23,7 @@ class Post(models.Model):
     )
     image = models.ImageField(
         upload_to='posts/', null=True, blank=True
-    )  # поле для картинки
+    )
     group = models.ForeignKey(
         Group, on_delete=models.SET_NULL,
         related_name='posts', blank=True, null=True
@@ -52,5 +52,5 @@ class Follow(models.Model):
     following = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='following')
 
-    def __str__(self):
-        return f'{self.user} --> {self.following}'
+    class Meta:
+        unique_together = ('user', 'following')
